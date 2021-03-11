@@ -1,0 +1,10 @@
+# feat_label = np.load('ahadb1.npy')
+# trainECG = feat_label[:,:-1]
+# trainECG = signal.resample(head,400,axis=1)
+
+trainECG = tf.random.normal([1100,400])
+trainECG = np.expand_dims(trainECG,2)
+
+#seed = tf.random.normal([num_examples_to_generate, noise_dim, 1],dtype='float64')
+
+seed = tf.random.normal([num_examples_to_generate, noise_dim, 1],dtype='float32')
